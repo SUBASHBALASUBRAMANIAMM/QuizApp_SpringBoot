@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.*;
 public class QuestionController {
     @Autowired
     QuestionService questionService;
+    @GetMapping("home")
+    public String get(){
+        return "string";
+    }
 @GetMapping("allQuestions")
     public List<Question> allQuestions(){
         return questionService.allQuestion();
